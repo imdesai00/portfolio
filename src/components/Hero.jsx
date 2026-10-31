@@ -5,6 +5,7 @@ const tiles = [
   { ch: '</>', cls: 'bg-lime', r: '-9deg' },
   { ch: '{ }', cls: 'bg-accent', r: '7deg' },
   { ch: '=>', cls: 'bg-ink text-paper', r: '-5deg' },
+  { ch: '2.5+', cls: 'bg-paper border border-ink', r: '6deg' },
 ]
 
 export default function Hero() {
@@ -34,6 +35,10 @@ export default function Hero() {
           <Reveal delay={400} className="max-w-md">
             <p className="text-lg leading-snug text-ink/80">{profile.intro}</p>
             <p className="mt-4 font-mono text-xs uppercase tracking-widest text-mute">{profile.availability}</p>
+            <div className="mt-6 flex gap-3 text-sm font-medium">
+              <a href="#work" className="rounded-full bg-ink px-5 py-2 text-paper hover:bg-accent hover:text-ink">View work</a>
+              <a href={profile.resumeUrl} download className="rounded-full border border-ink px-5 py-2 hover:bg-lime">Résumé PDF ↓</a>
+            </div>
           </Reveal>
 
           <Reveal delay={500} className="flex gap-3" aria-hidden="true">

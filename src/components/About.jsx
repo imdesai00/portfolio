@@ -1,4 +1,4 @@
-import { services, stack, profile } from '../data/content'
+import { skills, stack, profile } from '../data/content'
 import Reveal from './Reveal'
 
 export default function About() {
@@ -9,19 +9,18 @@ export default function About() {
         <Reveal>
           <h2 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
             Every project includes{' '}
-            <span className="font-serif font-normal italic">architecture, code, tests and delivery.</span>
+            <span className="font-serif font-normal italic">architecture, integrations, deployment and monitoring.</span>
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid border-t border-ink md:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal key={s.n} delay={i * 120} className="border-b border-line py-8 md:border-b-0 md:pr-8">
-              <p className="font-mono text-xs text-mute">{s.n}</p>
-              <h3 className="mt-6 text-2xl font-semibold tracking-tight">{s.title}</h3>
-              <p className="mt-3 max-w-xs text-mute">{s.text}</p>
+        <dl className="mt-16 border-t border-ink">
+          {skills.map((s, i) => (
+            <Reveal key={s.group} delay={i * 50} className="grid gap-1 border-b border-line py-5 md:grid-cols-12 md:gap-6">
+              <dt className="font-mono text-xs uppercase tracking-widest text-mute md:col-span-3 md:pt-1">{s.group}</dt>
+              <dd className="text-lg tracking-tight md:col-span-9">{s.items}</dd>
             </Reveal>
           ))}
-        </div>
+        </dl>
       </div>
 
       <div className="marquee mt-20 overflow-hidden border-y border-ink py-5">
