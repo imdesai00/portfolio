@@ -1,7 +1,7 @@
 # Portfolio Project Brief (handoff from planning session)
 
 Read this fully before doing anything. It captures every decision made so far.
-**Status: content and design are NOT yet approved. Do not write site code until the owner approves.**
+**Status: site is built and merged. Content now follows the owner's résumé (see "Resolved by résumé"). Remaining open items are listed below.**
 
 ## Working rules
 - Owner: Harsh Desai (GitHub: imdesai00), Ahmedabad, India. Designation: **Software Engineer** (full-stack).
@@ -36,6 +36,22 @@ Read this fully before doing anything. It captures every decision made so far.
 - **Jenkins CI/CD pipeline**: merge to main triggers build + tests; on success publishes and emails a report.
 - **Planvers**: owner's own startup (repos: planveres-app, -vendor, -admin, -mobile, -api; Flutter/Dart mobile, TypeScript web, PostgreSQL). Owner asked for a **short description**; real product description still needed. Confirm spelling (repos say "planveres").
 - Public GitHub is mostly tutorial-level repos (JWT login, CRUD, Hangfire, Kafka demo, Docker guide, early Ethereum/web3 demos). De-emphasize these; show in a small "Automation / Learning lab" section only.
+
+## Resolved by résumé (source of truth where it disagrees with the notes above)
+Résumé lives at `public/resume.pdf` (source: `resume/resume.html`). It supersedes earlier assumptions:
+- **Dates:** trackNOW Pvt. Ltd., Software Engineer, Jul 2026 – Present. Amnex Infotechnologies Pvt. Ltd., Associate Software Developer, Feb 2024 – Jul 2026. Gigapher, Blockchain Developer Intern, Jul 2022 – Jul 2023.
+- **Experience length:** 2.5+ years (résumé), not "3 years".
+- **Attribution:** OPRS, ONDC (TRV12), OBU panel, WhatsApp chatbot (n8n + PostgreSQL, Rasa, Gemini, Rocket.Chat), Grafana EMS and SLA automation are **Amnex** work. TrackNow is the fleet/telematics SaaS (ASP.NET Core, Angular, PostgreSQL). The earlier assumption that the chatbot and EMS were TrackNow was wrong.
+- **Education:** B.E., LJ Institute of Engineering & Technology (CGPA 8.04); Diploma in Computer Engineering, Government Polytechnic, Jamnagar (CGPA 8.82).
+- **Location/contact:** Ahmedabad, Gujarat. Résumé also lists a phone number; it is in the PDF only, not on the web pages.
+- Closes open items 1, 2 (partly) and 6.
+
+### Claims in the brief that the résumé does NOT confirm (kept on site, unattributed or flagged `TODO` in `src/data/content.js`)
+- 12,000 devices and Kafka (placed on the TrackNow fleet card).
+- Four payment gateways: PhonePe, Razorpay, Cashfree, SBI; crew planning and scheduling algorithm (on the OPRS card).
+- Notification engine and waste management system (no employer or dates shown).
+- SigNoz and Prometheus alongside Grafana (EMS card), Jenkins pipeline, Planvers.
+- Résumé names EMS "Environmental Monitoring System"; the brief describes it as telemetry and traces for SLA review. The site avoids expanding the acronym until the owner confirms.
 
 ## Still open (ask owner)
 1. Start/end dates for Amnex and TrackNow.

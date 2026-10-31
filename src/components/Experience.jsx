@@ -1,4 +1,4 @@
-import { experience, profile } from '../data/content'
+import { experience, education, profile } from '../data/content'
 import Reveal from './Reveal'
 
 export default function Experience({ onContact }) {
@@ -29,6 +29,21 @@ export default function Experience({ onContact }) {
             </Reveal>
           ))}
         </ol>
+      </div>
+
+      <div className="mx-auto mt-20 max-w-7xl">
+        <Reveal>
+          <h3 className="font-mono text-xs uppercase tracking-widest text-mute">Education</h3>
+        </Reveal>
+        <ul className="mt-4 border-t border-ink">
+          {education.map((e) => (
+            <Reveal as="li" key={e.degree} className="grid gap-1 border-b border-line py-5 md:grid-cols-12 md:gap-6">
+              <p className="font-semibold tracking-tight md:col-span-5">{e.degree}</p>
+              <p className="text-mute md:col-span-5">{e.school}</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-mute md:col-span-2 md:text-right">{e.score}</p>
+            </Reveal>
+          ))}
+        </ul>
       </div>
 
       <Reveal className="mx-auto mt-32 max-w-7xl text-center">
