@@ -100,11 +100,13 @@ export default function ContactPanel({ open, onClose }) {
               </a>
             </li>
           ))}
-          <li>
-            <a href={profile.resumeUrl} className="rounded-full border border-ink px-4 py-1.5 text-sm hover:bg-lime">
-              Résumé ↓
-            </a>
-          </li>
+          {profile.resumeUrl !== '#' && (
+            <li>
+              <a href={profile.resumeUrl} className="rounded-full border border-ink px-4 py-1.5 text-sm hover:bg-lime">
+                Résumé ↓
+              </a>
+            </li>
+          )}
         </ul>
 
         <h3 className="mt-12 font-mono text-xs uppercase tracking-widest text-mute">FAQ</h3>

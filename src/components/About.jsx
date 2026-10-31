@@ -9,7 +9,7 @@ export default function About() {
         <Reveal>
           <h2 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
             Every project includes{' '}
-            <span className="font-serif font-normal italic">architecture, code, tests and delivery.</span>
+            <span className="font-serif font-normal italic">architecture, integrations, deployment and monitoring.</span>
           </h2>
         </Reveal>
 

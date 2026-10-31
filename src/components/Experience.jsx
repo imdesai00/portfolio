@@ -17,7 +17,13 @@ export default function Experience({ onContact }) {
               <p className="font-mono text-xs uppercase tracking-widest text-mute md:col-span-3">{e.period}</p>
               <div className="md:col-span-4">
                 <h3 className="text-xl font-semibold tracking-tight">{e.role}</h3>
-                <p className="text-mute">{e.org}</p>
+                {e.url ? (
+                  <a href={e.url} target="_blank" rel="noreferrer" className="text-mute underline decoration-line underline-offset-4 hover:text-ink">
+                    {e.org} ↗
+                  </a>
+                ) : (
+                  <p className="text-mute">{e.org}</p>
+                )}
               </div>
               <p className="max-w-md md:col-span-5">{e.text}</p>
             </Reveal>

@@ -5,6 +5,7 @@ const tiles = [
   { ch: '</>', cls: 'bg-lime', r: '-9deg' },
   { ch: '{ }', cls: 'bg-accent', r: '7deg' },
   { ch: '=>', cls: 'bg-ink text-paper', r: '-5deg' },
+  { ch: '12k', cls: 'bg-paper border border-ink', r: '6deg' },
 ]
 
 export default function Hero() {
