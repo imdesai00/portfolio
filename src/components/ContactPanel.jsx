@@ -54,9 +54,10 @@ export default function ContactPanel({ open, onClose }) {
   return (
     <div
       className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}
+      inert={!open}
       aria-hidden={!open}
-      role="dialog"
-      aria-modal="true"
+      role={open ? 'dialog' : undefined}
+      aria-modal={open ? 'true' : undefined}
       aria-label="Contact"
     >
       <div
@@ -64,6 +65,7 @@ export default function ContactPanel({ open, onClose }) {
         className={`absolute inset-0 bg-ink/40 transition-opacity duration-500 ${open ? 'opacity-100' : 'opacity-0'}`}
       />
       <aside
+        data-lenis-prevent
         className={`absolute right-0 top-0 flex h-full w-full max-w-xl flex-col overflow-y-auto bg-paper p-6 transition-transform duration-500 ease-[cubic-bezier(0.2,0.7,0.2,1)] md:p-10 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}

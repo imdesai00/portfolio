@@ -31,83 +31,174 @@ export const projects = [
   {
     slug: 'fleet',
     title: 'Fleet & telematics platform',
-    kind: 'GPS fleet tracking SaaS · trackNOW',
+    kind: 'GPS fleet tracking SaaS',
+    role: 'Software Engineer',
+    company: 'trackNOW',
+    period: 'Jul 2026 – Present',
     year: 'Now',
     // 12,000 devices and Kafka come from the brief only, not the résumé. TODO: confirm.
     summary:
-      'Features for a fleet tracking platform serving logistics, school-bus and enterprise fleets: live tracking, trip history, geo-fencing and reports from high-frequency GPS data. Modules owned from requirements to production.',
+      'Features for a fleet tracking platform serving logistics, school-bus and enterprise fleets: live tracking, trip history, geo-fencing and reports from high-frequency GPS data.',
+    overview:
+      'A GPS-based fleet tracking SaaS platform used by logistics, school-bus and enterprise fleets. I build features across the backend and the UI, and I own modules from the first requirement to production.',
+    highlights: [
+      'Built backend and UI for live vehicle tracking, trip history, geo-fencing and fleet reports.',
+      'Process high-frequency GPS device data.',
+      'Own modules from scratch: requirement analysis, database design, API and UI development, then deployment to production.',
+      'Device data flows through Kafka queues, at a scale of 12,000 devices.',
+    ],
     stack: ['ASP.NET Core', 'Angular', 'PostgreSQL', 'Kafka'],
   },
   {
     slug: 'oprs',
     title: 'OPRS',
-    kind: 'Online Passenger Reservation System · Amnex',
+    kind: 'Online Passenger Reservation System',
+    role: 'Core developer',
+    company: 'Amnex',
+    period: 'Feb 2024 – Jul 2026',
     year: '2024–26',
     summary:
-      'Scalable ticket booking for state transport operations. REST APIs and Angular UI for route management, booking workflows, seat layouts and transactions. Integrated four payment gateways and built the crew planning and scheduling algorithm.',
-    stack: ['ASP.NET Core', 'Angular', 'PhonePe', 'Razorpay', 'Cashfree', 'SBI'],
+      'Scalable ticket booking for state transport operations. Core developer: built the APIs and UI, initiated four payment gateway integrations and wrote the crew scheduling algorithm.',
+    overview:
+      'The online ticket booking platform behind state transport operations. I was a core developer on it, owning APIs, the Angular UI and the third-party integrations that let passengers book and pay.',
+    highlights: [
+      'Initiated and integrated four payment gateways: PhonePe, Razorpay, Cashfree and SBI.',
+      'Built RESTful APIs in ASP.NET Core and the Angular UI for route management, booking workflows, seat layouts and transaction handling.',
+      'Integrated external platforms, including ONDC, for reliable data exchange and better interoperability.',
+      'Implemented the planning and scheduling algorithm for crew.',
+      'Developed and maintained a scalable system for state transport operations.',
+    ],
+    stack: ['ASP.NET Core', 'Angular', 'PhonePe', 'Razorpay', 'Cashfree', 'SBI', 'ONDC'],
   },
   {
     slug: 'ondc',
     title: 'ONDC mobility APIs',
-    kind: 'TRV12 protocol · Amnex',
+    kind: 'TRV12 protocol integration',
+    role: 'Developer',
+    company: 'Amnex',
+    period: 'Feb 2024 – Jul 2026',
     year: '2024–26',
     summary:
-      'Designed and integrated ONDC-compliant mobility APIs. Supports runtime vendor contract changes, version resilience, payload validation and seat layout mapping.',
-    stack: ['ONDC', 'TRV12', 'REST'],
+      'ONDC-compliant mobility APIs with runtime vendor contract changes, version resilience, payload validation and seat layout mapping.',
+    overview:
+      'Connected the booking platform to ONDC (Open Network for Digital Commerce) through its TRV12 mobility protocol.',
+    highlights: [
+      'Designed and integrated ONDC-compliant mobility APIs on the TRV12 protocol.',
+      'Supported runtime vendor contract changes.',
+      'Built in version resilience.',
+      'Added payload validation and seat layout mapping.',
+    ],
+    stack: ['ONDC', 'TRV12', 'REST', 'ASP.NET Core'],
   },
   {
     slug: 'obu',
     title: 'OBU panel',
-    kind: 'Live bus tracking · Amnex',
+    kind: 'Live bus tracking control panel',
+    role: 'Developer',
+    company: 'Amnex',
+    period: 'Feb 2024 – Jul 2026',
     year: '2024–26',
     summary:
-      'Control panel that parses GPS device data strings to show real-time location, speed, ignition status and route adherence on maps, with diagnostics.',
+      'Control panel that parses GPS device data to show live location, speed, ignition status and route adherence on maps.',
+    overview:
+      'A control panel for live bus tracking and diagnostics, driven by raw data strings from on-board GPS devices.',
+    highlights: [
+      'Parsed GPS device data strings into structured, usable telemetry.',
+      'Visualized real-time location, speed, ignition status and route adherence on map interfaces.',
+      'Added diagnostics for the devices.',
+    ],
     stack: ['GPS', 'Maps', 'Diagnostics'],
   },
   {
     slug: 'whatsapp-bot',
     title: 'WhatsApp chatbot',
-    kind: 'Complaint automation · Amnex',
+    kind: 'Complaint registration and support',
+    role: 'Developer',
+    company: 'Amnex',
+    period: 'Feb 2024 – Jul 2026',
     year: '2024–26',
     summary:
-      'Built in n8n with PostgreSQL, Rasa, Gemini, Rocket.Chat and the WhatsApp API. Registers complaints, offers AI and human chat support and tracks tickets in real time.',
-    stack: ['n8n', 'Gemini', 'Rasa', 'WhatsApp API'],
+      'Built in n8n with PostgreSQL, Rasa, Gemini, Rocket.Chat and the WhatsApp API for complaints, AI and human support and ticket tracking.',
+    overview:
+      'A fully working WhatsApp chatbot for complaint registration, AI and human chat support and real-time ticket tracking.',
+    highlights: [
+      'Built the workflow in n8n, tying together PostgreSQL, Rasa, Gemini, Rocket.Chat and the WhatsApp API.',
+      'Complaint registration end to end through chat.',
+      'AI answers with a handoff to human agents when needed.',
+      'Real-time ticket tracking from the same conversation.',
+    ],
+    stack: ['n8n', 'Gemini', 'Rasa', 'Rocket.Chat', 'WhatsApp API', 'PostgreSQL'],
   },
   {
     slug: 'ems',
     title: 'EMS & SLA automation',
-    kind: 'Monitoring and reporting · Amnex',
+    kind: 'Monitoring and reporting',
+    role: 'Developer',
+    company: 'Amnex',
+    period: 'Feb 2024 – Jul 2026',
     year: '2024–26',
     summary:
-      'Centralized Grafana dashboard for server and container utilization, with alerts and automated logs. SLA penalty reports generated automatically from API uptime, incident logs and scheduled downtime.',
+      'Centralized Grafana monitoring with alerts, plus SLA penalty reports generated automatically from uptime and incident data.',
+    overview:
+      'Monitoring that identifies issues proactively, and SLA reporting that generates itself.',
+    highlights: [
+      'Configured a centralized Grafana dashboard for server and container resource utilization.',
+      'Set up alerts and automated logs to catch issues proactively.',
+      'Automated SLA penalty report generation from API uptime and downtime, incident logs and scheduled downtime.',
+      'Improved reporting speed and compliance accuracy.',
+    ],
     stack: ['Grafana', 'Prometheus', 'SigNoz'],
   },
   {
     slug: 'notifications',
     title: 'Notification engine',
-    kind: 'Messaging platform', // TODO: confirm employer and dates
+    kind: 'Automated messaging platform', // TODO: confirm employer and dates
+    role: 'Designed and built alone',
+    company: '',
+    period: '',
     year: 'Solo',
     summary:
       'Designed and built alone. Fully automated, dynamic and template-based, with a scheduler.',
+    overview:
+      'A notification module I designed and built on my own.',
+    highlights: [
+      'Fully automated delivery.',
+      'Dynamic, template-based content.',
+      'Built-in scheduler for timed sends.',
+    ],
     stack: ['Templates', 'Scheduler'],
   },
   {
     slug: 'waste-management',
     title: 'Waste management system',
     kind: 'Solo build', // TODO: confirm employer and dates
+    role: 'Sole developer',
+    company: '',
+    period: '',
     year: 'Solo',
     summary: 'Built end to end as the only developer. Fully automated.',
+    overview: 'A waste management system built end to end as the only developer.',
+    highlights: ['Sole developer from start to finish.', 'Fully automated operation.'],
     stack: [],
   },
   {
     slug: 'planvers',
     title: 'Planvers',
     kind: 'My own startup',
+    role: 'Founder',
+    company: 'Planvers',
+    period: 'In progress',
     year: 'Founder',
     // TODO: replace with one line on what Planvers does and who it is for.
     summary:
       'A product I am building myself, across a mobile app, vendor and admin web apps and an API.',
+    overview:
+      'My own startup, built alongside my job. It is split into separate codebases for the mobile app, the vendor app, the admin app and the API.',
+    highlights: [
+      'Mobile app built with Flutter and Dart.',
+      'Vendor and admin web apps in TypeScript.',
+      'A dedicated API on PostgreSQL.',
+    ],
     stack: ['Flutter', 'TypeScript', 'PostgreSQL'],
   },
 ]

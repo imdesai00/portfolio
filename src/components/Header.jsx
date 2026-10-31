@@ -1,4 +1,5 @@
 import { profile } from '../data/content'
+import Magnetic from './Magnetic'
 
 const links = [
   { label: 'Work', href: '#work' },
@@ -15,16 +16,19 @@ export default function Header({ onContact }) {
         </a>
         <nav className="flex items-center gap-6 text-sm">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="hidden hover:opacity-60 md:block">
+            <a key={l.href} href={l.href} className="group relative hidden md:block">
               {l.label}
+              <span className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-white transition-transform duration-300 group-hover:scale-x-100" />
             </a>
           ))}
-          <button
-            onClick={onContact}
-            className="rounded-full border border-white/70 px-4 py-1.5 hover:bg-white hover:text-black"
-          >
-            Connect
-          </button>
+          <Magnetic>
+            <button
+              onClick={onContact}
+              className="rounded-full border border-white/70 px-4 py-1.5 transition-colors hover:bg-white hover:text-black"
+            >
+              Connect
+            </button>
+          </Magnetic>
         </nav>
       </div>
     </header>
